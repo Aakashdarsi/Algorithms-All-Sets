@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT aliens (alien+)>
+<!ELEMENT alien (name,Age,Gender)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+<!ELEMENT Gender (#PCDATA)>
+<!ATTLIST alien aid ID #REQUIRED>
+<!ATTLIST alien lang (p|Java|C|CPP|GOLANG) "p">

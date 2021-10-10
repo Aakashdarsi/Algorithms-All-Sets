@@ -1,0 +1,12 @@
+Rules for XML 
+1. One root tag
+2. XML is case sensitive
+3. every opening tag should have closing tag 
+4. EVery attribute should be in double/ SIngle quotes
+
+
+XML parser
+for work with grammar we use xml parsers. 
+There are mainly 2 types of grammars:- 
+1. Structural grammar : - used to define the structure :->>>> DTD
+2. Content grammar :- used to deal with the data :->>>>>> Schema 
