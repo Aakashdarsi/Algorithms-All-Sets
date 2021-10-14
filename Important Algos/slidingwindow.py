@@ -1,5 +1,5 @@
 def sliding(array, k):
-    curr_sum = 0
+    curr_sum = 0   # Approach of sliding window method
     max_sum = 0
     for i in range(k):
         curr_sum += array[i]
