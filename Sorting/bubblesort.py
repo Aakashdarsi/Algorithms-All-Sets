@@ -1,23 +1,25 @@
-'''
-used for sorting of elements.
+# bubble sort worst case -> O(N^2) Best case -> O(N)
 
 
-in first pass largest element would be at last
-at 2nd pass 2nd largest element would be at last
+def bubble(array):
+    if len(array) == 0:
+        print("No elements in array")
+    elif len(array) == 1:
+        print(array)
+    else:
+        for i in range(len(array)-1):
+            swapped = False
+            for j in  range(1,len(array)-i):
+                if array[j]<array[j-1]:
+                    array[j],array[j-1] = array[j-1], array[j]
+                    swapped = True
+            if swapped == False:
+                break
+        print(array)
 
-if there are no swaps then the array is sorted
-'''
-n = [-10,1,-1,3,56]
-swap = False 
-for i in range(len(n)):
-    
-    for j in range(1,len(n)-i):
-        if n[j]<n[j-1]:
-            n[j],n[j-1]=n[j-1],n[j]
-            swap = True
-    if swap ==False:
-        break
 
-    
-    
-print(n)
+
+
+
+array = list(map(int,input().split()))
+bubble(array)
