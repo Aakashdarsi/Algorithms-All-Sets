@@ -70,6 +70,31 @@ class LinkedList:
             print(temp.data,end="->")
             temp = temp.next 
 
+    def delete_start(self):
+        q = self.head 
+        p = self.head.next 
+        self.head = p 
+        del q 
+    def delete_data(self,data):
+         q = self.head 
+         p = self.head.next
+         while p.data != data :
+             p = p.next
+             q = q.next
+         if p.next is None:
+             q.next = None 
+             del p 
+         else:
+             q.next = p.next 
+             del p 
+            
+
+        
+
+
+
+
+   
         
 
 Llist = LinkedList()
@@ -81,4 +106,13 @@ Llist.insert_begin(n2)
 Llist.insert_begin(n3)
 Llist.insert_position(22,2)
 Llist.insert_end(56)
+Llist.display()
+Llist.delete_start()
+print()
+Llist.display()
+Llist.delete_data(56)
+print()
+Llist.display()
+Llist.delete_data(22)
+print()
 Llist.display()
