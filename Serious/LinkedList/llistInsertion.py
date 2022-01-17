@@ -68,6 +68,8 @@ class LinkedList:
         p = self.head.next 
         self.head = p 
         del q 
+
+        
     def delete_data(self,data):
          q = self.head 
          p = self.head.next
@@ -80,6 +82,7 @@ class LinkedList:
          else:
              q.next = p.next 
              del p 
+         return self.head
             
 
         
