@@ -1,37 +1,42 @@
 class Node:
-    def __init__(self,data):
-        self.data = data
+    def __init__(self, data):
+        self.data = data 
         self.left = None 
-        self.right = None
-    
-    def insert(self,data):
-        if self.data is None:
-            self.data = Node(data)
+        self.right = None 
+
+class Tree:
+    def createNode(self, data):
+        return Node(data)
+
+    def insert(self,node,data):
+        if node is None:
+            return self.createNode(data)
+        if data < node.data:
+            node.left = self.insert(node.left,data)
         else:
-            if data < self.data:
-                if self.left is None:
-                    self.left = Node(data)
-                else:
-                    self.left.insert(data)
-            else:
-                if self.right is None:
-                    self.right = Node(data)
-                else:
-                    self.right.insert(data)
-def inorder_print(r):
-    if r is None:
-        return 
-    else:
-        inorder_print(r.left)
-        print(r.data,end = "->")
-        inorder_print(r.right)
+            node.right = self.insert(node.right,data)
+        return node 
+        
+    def traverse_inorder(self,root):
+        if root is not None:
+            self.traverse_inorder(root.left)
+            print(root.data)
+            self.traverse_inorder(root.right)
+
 
     
-root = Node('g')
-root.insert('a')
-root.insert('c')
-root.insert('b')
-root.insert('d')
-root.insert('e')
-root.insert('f')
-inorder_print(root)
+
+tree = Tree()
+root = tree.createNode(5)
+l = [2,10,7,15,12,20,30,6,8]
+tree.insert(root,2)
+tree.insert(root,10)
+tree.insert(root,7)
+tree.insert(root,15)
+tree.insert(root,12)
+tree.insert(root,20)
+tree.insert(root,30)
+tree.insert(root,6)
+tree.insert(root,8)
+print("Inorder traversal ----->")
+tree.traverse_inorder(root)
