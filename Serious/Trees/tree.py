@@ -17,12 +17,17 @@ class Tree:
             node.right = self.insert(node.right,data)
         return node 
         
-    def traverse_inorder(self,root):
+    def traverse_inorder(self,root): # first left and then root and then right
         if root is not None:
             self.traverse_inorder(root.left)
             print(root.data)
             self.traverse_inorder(root.right)
 
+    def traverse_preorder(self,root): # first print root then left and right  = >Time complexity is O(N)
+        if root is not None:
+            print(root.data)
+            self.traverse_preorder(root.left)
+            self.traverse_preorder(root.right)
 
     
 
