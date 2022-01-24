@@ -1,7 +1,3 @@
-from turtle import heading
-from numpy import insert
-
-
 class Node:
     def __init__(self,data):
         self.data = data 
