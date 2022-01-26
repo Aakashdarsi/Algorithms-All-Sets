@@ -1,3 +1,4 @@
+#https://www.youtube.com/watch?v=e9ZGxH1y_PE&t=495s
 class Node:
   def __init__(self,data):
     self.left = None
