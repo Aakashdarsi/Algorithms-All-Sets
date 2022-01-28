@@ -22,11 +22,15 @@ class Graph:
             print(node+" "+str(len(self.adj_list[node]))+" degree")
 
     def dfs(self,node):
-        stack.append(node)
-        visited.append(node)
-        while len(stack) != 0:
-            curr =  stack.pop()
-            print(curr,end=" ")
-            for neighbours in self.adj_list[curr]:
-                if neighbours not in visited: 
-                    stack.append(neighbours)
+        if node not in visited:
+            print(node,end=" ")
+            visited.append(node)
+            for neighbour in self.adj_list[node]:
+                self.dfs(neighbour)
+nodes = ['A','B','C','D','E','F']
+graph = Graph(nodes,is_directed=True)
+for v,e in edges:
+    graph.add_edges(v,e)
+
+graph.dfs("A")
+
