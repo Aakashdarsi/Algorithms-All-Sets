@@ -31,7 +31,7 @@ class Graph:
             for neighbours in self.adj_list[curr]:
                 if neighbours not in visited: 
                     queue.append(neighbours)
-                    visited.append(neighbours)
+                    
            
 nodes = ['A','B','C','D','E','F']
 graph = Graph(nodes,is_directed=True)
