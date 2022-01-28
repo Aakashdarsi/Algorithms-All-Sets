@@ -19,7 +19,7 @@ class Graph:
         for node in self.nodes:
             print(node+" "+str(len(self.adj_list[node]))+" degree")
 nodes = ['A','B','C','D','E']
-graph = Graph(nodes,is_directed=True)
+graph = Graph(nodes,is_directed=False)
 for v,e in edges:
     graph.add_edges(v,e)
 graph.print_adj()
