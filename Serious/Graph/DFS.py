@@ -1,6 +1,5 @@
-#BFS WE make use of queue
-queue = [] 
-visited = []
+stack = []
+visited = [] 
 edges = [("A","B"),('A','C'),('B','D'),('B','E'),('C','F'),('E','F')]
 class Graph:
     def __init__(self,nodes,is_directed = False):
@@ -22,22 +21,12 @@ class Graph:
         for node in self.nodes:
             print(node+" "+str(len(self.adj_list[node]))+" degree")
 
-    def bfs(self,node):
-        queue.append(node)
+    def dfs(self,node):
+        stack.append(node)
         visited.append(node)
-        while len(queue) != 0:
-            curr = queue.pop(0)
+        while len(stack) != 0:
+            curr =  stack.pop()
             print(curr,end=" ")
             for neighbours in self.adj_list[curr]:
                 if neighbours not in visited: 
-                    queue.append(neighbours)
-                    visited.append(neighbours)
-                    
-           
-nodes = ['A','B','C','D','E','F']
-graph = Graph(nodes,is_directed=True)
-for v,e in edges:
-    graph.add_edges(v,e)
-graph.print_adj()
-graph.bfs("A")
-
+                    stack.append(neighbours)
