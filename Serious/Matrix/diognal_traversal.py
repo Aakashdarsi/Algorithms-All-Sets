@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?v=T8ErAYobcbc
 def diognal_traversal(matrix,rows,colums):
     for k in range(0,rows):
         i = k 
