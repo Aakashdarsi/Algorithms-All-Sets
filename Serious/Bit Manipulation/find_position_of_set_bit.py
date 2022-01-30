@@ -14,3 +14,13 @@ class Solution:
                 N = N>>1
             return count
         return -1
+#############################################
+#Using Logarithms
+def findPosition(self, N):
+        # code here 
+        if N ==0:
+            return -1
+        if N&(N-1) == 0:
+            return int(math.log(N,2))+1
+            
+        return -1
