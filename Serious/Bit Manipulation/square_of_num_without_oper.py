@@ -1,6 +1,6 @@
 #https://www.geeksforgeeks.org/calculate-square-of-a-number-without-using-and-pow/
 #https://www.youtube.com/watch?v=pOKuLSKnAW4
-n = 5
+n = int(input())
 if n <0:
     n = -n 
 temp = n 
