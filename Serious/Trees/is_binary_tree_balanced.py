@@ -1,3 +1,7 @@
+from sqlite3 import Timestamp
+
+
+#https://www.youtube.com/watch?v=nHMQ33LZ6oA&list=PLDzeHZWIZsTo87y1ytEAqp7wYlEP3nner&index=2 Timestamp : 35:49
 class Node:
     def __init__(self,data):
         self.data = data 
