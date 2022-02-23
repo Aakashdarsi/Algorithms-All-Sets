@@ -30,8 +30,8 @@ class Tree:
         queue.appendleft(root)
         queue.appendleft(None)
         while len(queue) != 0:
-            node = queue.pop()
-            if node is  None:
+            node = queue.pop() # append None with root . If we found None that means we successfully completed one level
+            if node is  None: # print new line then . After that check whether queue is non empty then enqueue None
                 print()
                 if len(queue)!=0:
                     queue.appendleft(None)
