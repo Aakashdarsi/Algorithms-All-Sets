@@ -1,3 +1,5 @@
+#https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
+#https://www.youtube.com/watch?v=ey7DYc9OANo
 class Node:
     def __init__(self,data):
         self.data = data 
