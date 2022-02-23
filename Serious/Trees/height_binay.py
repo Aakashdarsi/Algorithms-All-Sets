@@ -17,14 +17,14 @@ class Tree:
             root.right = self.insert(root.right,data)
         return root 
     def height(self,root): # height indicates the number of nodes present in betweeen from ground level to root !!!!! 
-        h = 0
-        if root is None:
+        h = 0 # let initial height is zero
+        if root is None: # check for the root whether it is None
             return 0
-        l = self.height(root.left)
-        r = self.height(root.right)
-        if l > r:
+        l = self.height(root.left) # Check height of left subtree
+        r = self.height(root.right) # check height of right sub tree
+        if l > r: # if height of left subtree is greater than right subtree
             h = 1 + l
-        else:
+        else: 
             h = 1 +r 
         return h
 tree = Tree()
