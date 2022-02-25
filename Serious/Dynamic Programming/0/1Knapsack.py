@@ -1,3 +1,5 @@
+#https://www.youtube.com/watch?v=kvyShbFVaY8&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=3
+#https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
 def knapsack(weight,profit,n,bag_wt):
     if n == 0 or bag_wt == 0:
         return 0 
