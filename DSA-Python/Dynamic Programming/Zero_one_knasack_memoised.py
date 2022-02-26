@@ -32,3 +32,7 @@ bag_wt = int(input())
 n = len(weights)
 dp_table = [[-1 for i in range(bag_wt+1)] for i in range(len(weights)+1)]
 print(memoised_dp(weights,profits,bag_wt,n))
+for i in range(n+1):
+    for j in range(bag_wt+1):
+        print(dp_table[i][j],end='|')
+    print()
