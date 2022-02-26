@@ -19,3 +19,4 @@ for i in range(n+1):
     for j in range(bag_wt+1):
         print(dp_table[i][j],end = "|")
     print("\n")
+#Time Complexity is O(N*bag_wt)
