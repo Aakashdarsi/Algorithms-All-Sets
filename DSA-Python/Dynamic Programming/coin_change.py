@@ -1,6 +1,6 @@
 #Leetcode 518
 # Max Number of Ways
-
+# If in quesetion if they ask max number of ways or choies then use + operator
 coins = list(map(int,input().split()))
 sum_to = int(input())
 n = len(coins)
