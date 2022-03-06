@@ -1,45 +1,47 @@
+# https://www.techiedelight.com/vertical-traversal-binary-tree/
+#  Using level order traversal
+# https://www.youtube.com/results?search_query=vertical+order+traversal+binary+tree
+
+from collections import deque
 class Node:
-  def __init__(self,data):
-    self.left = None
-    self.data = data 
-    self.right = None 
-  
-
+    def __init__(self,data):
+        self.data = data
+        self.left  = None
+        self.right = None 
 class Tree:
-  def createNode(self,data):
-    return Node(data)
-  
-  def insert(self,root,data):
-    if root is None:
-      return self.createNode(data)
-    if data < root.data:
-      root.left = self.insert(root.left,data)
-    if data > root.data:
-      root.right = self.insert(root.right,data)
-    return root 
-  
-  def getVerticalOrder(self,root,m,hd):
-    if root is None:
-      return 
-    try:
-      m[hd].append(root.data)
-    except:
-      m[hd] = [root.data]
-    self.getVerticalOrder(root.left,m,hd-1)
-    self.getVerticalOrder(root.right,m,hd+1)
-
-
-  def printVerticalorder(self,root):
-    m = dict()
-    hd = 0 
-    self.getVerticalOrder(root,m,hd)
-    for i in sorted(m):
-      print(str(i)+"->"+str(m[i]))
+    def createNode(self,data):
+        return Node(data)
+    
+    def insert_node(self,data,root):
+        if root is None:
+            return self.createNode(data)
+        if data < root.data:
+            root.left = self.insert_node(data,root.left)
+        if data > root.data:
+            root.right = self.insert_node(data,root.right)
+        return root
+    def vertical_order_traversal(self,root):
+        if root is None:
+            return 
+        queue = deque()
+        d = {}
+        queue.appendleft((root,0))
+        while len(queue) != 0:
+            node,hd = queue.pop()
+            d.setdefault(hd,[]).append(node.data)
+            if node.left is not None:
+                queue.append((node.left,hd-1))
+            if node.right is not None:
+                queue.append((node.right,hd+1))
+        print(d)
+root  = Node(2)
 tree = Tree()
-root = tree.createNode(5)
-tree.insert(root,2)
-tree.insert(root,6)
-tree.insert(root,3)
-tree.insert(root,8)
-
-tree.printVerticalorder(root)
+tree.insert_node(1,root)
+tree.insert_node(-1,root)
+tree.insert_node(3,root)
+# tree.insert_node(6,root)
+# tree.insert_node(7,root)
+# tree.insert_node(8,root)
+# tree.insert_node(9,root)
+# tree.insert_node(10,root)
+tree.vertical_order_traversal(root)
