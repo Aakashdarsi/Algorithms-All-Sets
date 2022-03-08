@@ -1,5 +1,5 @@
 # https://www.youtube.com/watch?v=XuMmc-WstpI
-'''
+
 class ListNode:
 
     # Constructor to create a new node
@@ -17,7 +17,7 @@ class Tree:
         self.left = None
         self.right = None
 
-'''
+
 
 #Function to make binary tree from linked list.
 def convert(head):
