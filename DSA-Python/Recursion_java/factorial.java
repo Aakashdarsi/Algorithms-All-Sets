@@ -1,5 +1,9 @@
 /* If No base condtion then it will lead to stack overflow*/
-
+// In recursion base case is mandatory otherwise segmentation error will occur 
+// recurence relation should be mandatory 
+// Processing part !!! Optional !!! 
+// if reccurece relation comes at end after processing uch relation is called tail recursion
+// if reccurence relation comes before processing such recuurence relation is calld head recursion 
 import java.util.*;
 class factorial 
 {
