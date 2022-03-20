@@ -3,6 +3,7 @@ def reverse(str,start,end):
         print("".join(str))
         return 
     str[start],str[end] = str[end],str[start]
+    print("Call recieved for: "+"".join(str))
     reverse(str,start+1,end-1)
 
 str = list(input())
