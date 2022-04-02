@@ -22,3 +22,7 @@ def balanced_brackets(string):
             
 s = input()
 print(balanced_brackets(s))
+# Edge cases 
+# If we come across a closing paranthesis but the stack is empty then it is not balanced 
+# If the stack is not empty then we check the top value of stack if both are matching then pop the element from stack
+# If it is not matching clearly it is unbalanced 
