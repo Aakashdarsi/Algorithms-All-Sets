@@ -1,5 +1,5 @@
 # [1,2,3,1,4,5,6,7]
-
+# https://www.youtube.com/watch?v=agrAZN4TBTA
 # Here 1 is the first duplicate element 
 # Approach 1
 def duplicate_first(array):
